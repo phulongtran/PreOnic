@@ -1,0 +1,249 @@
+/* ========== LAYOUT ========== */
+.ed-layout {
+  display: flex;
+  min-height: 100vh;   /* 🔥 QUAN TRỌNG */
+  background: #f8f9fa;
+}
+
+
+.ed-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #22c55e; /* xanh lá giống hình */
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOGO */
+.ed-sidebar .logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000; /* chữ đen */
+}
+
+/* MENU */
+.ed-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ed-sidebar nav button {
+  background: transparent;
+  border: none;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+
+  color: #000;              /* chữ đen */
+  border-radius: 10px;
+}
+
+/* ITEM ACTIVE */
+.ed-sidebar nav button.active {
+  background: rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+}
+
+/* HOVER */
+.ed-sidebar nav button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* BUTTON DƯỚI CÙNG */
+.create-btn {
+  margin-top: auto;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* ========== MAIN ========== */
+.ed-main {
+  flex: 1;
+  padding: 24px;
+}
+
+.ed-main h1 {
+  margin-bottom: 20px;
+}
+
+/* ========== STATS ========== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.stat b {
+  font-size: 22px;
+  display: block;
+}
+
+.stat .up {
+  color: #2ecc71;
+}
+
+.stat .down {
+  color: #e74c3c;
+}
+
+/* ========== GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+/* ========== FARMER ========== */
+.farmer {
+  grid-row: span 2; /* kéo card dài xuống */
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #e9f7ef;
+  color: #2ecc71;
+  border-radius: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ========== APPROVAL ========== */
+.approval-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.actions button {
+  margin-left: 6px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions .approve {
+  background: #2ecc71;
+  color: white;
+}
+
+.actions .view {
+  background: #ecf0f1;
+}
+
+/* ========== CHART (SO SÁNH GIÁ) ========== */
+.chart {
+  height: 260px;
+}
+
+.bars {
+  height: 180px;             /* chuẩn để % hoạt động */
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.bar-wrapper {
+  flex: 1;
+  height: 100%;              /* 🔥 BẮT BUỘC */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.bar {
+  width: 100%;
+  background: #4ade80;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.3s ease;
+}
+
+
+.bar-wrapper small {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ========== CIRCLE ========== */
+.circle {
+  grid-column: 3;
+}
+
+.circle-chart {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 10px solid #2ecc71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ========== TABLE ========== */
+.table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+td.ok {
+  color: #2ecc71;
+  font-weight: 600;
+}

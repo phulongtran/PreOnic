@@ -1,0 +1,85 @@
+.stats-section {
+  padding: 80px 20px;
+}
+
+.stats-wrapper {
+  background: linear-gradient(135deg, #0b4d2d, #0f6b3e);
+  border-radius: 24px;
+  padding: 60px;
+  color: #fff;
+}
+
+/* LEFT */
+.stats-left h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.stats-left h2 span {
+  color: #1eff00;
+}
+
+.stats-left p {
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.stats-numbers h3 {
+  color: #1eff00;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.stats-numbers span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* RIGHT */
+.stats-right {
+  position: relative;
+}
+
+/* ✅ KHỐI ĐEN LỚN */
+.dashboard-card {
+  position: relative;
+  background: #f1f6f4f7;          /* 🔥 NỀN ĐEN */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ẢNH */
+.dashboard-img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* FLOATING CARD */
+.floating-card {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  background: #1eff00;
+  color: #003d1f;
+  padding: 18px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stats-wrapper {
+    padding: 40px 20px;
+  }
+
+  .floating-card {
+    position: static;
+    margin-top: 20px;
+  }
+}

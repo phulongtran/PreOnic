@@ -1,0 +1,52 @@
+/* ===== NAVBAR NỀN TRẮNG ĐẬM ===== */
+.navbar-custom {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 0;
+}
+
+/* Logo */
+.navbar-custom .navbar-brand {
+  color: #111827 !important;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Menu giữa */
+.navbar-custom .nav-link {
+  color: #374151 !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #157347 !important;
+}
+
+/* ===== NÚT ĐĂNG NHẬP ===== */
+.navbar-login-btn {
+  background-color: #157347;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.navbar-login-btn:hover {
+  background-color: #0f5c38;
+}
+
+/* ===== NÚT ĐĂNG KÝ (GIỮ LẠI CỦA BẠN) ===== */
+.navbar-register-btn {
+  background-color: transparent;
+  color: #157347;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 2px solid #157347;
+  font-weight: 600;
+}
+
+.navbar-register-btn:hover {
+  background-color: #157347;
+  color: #ffffff;
+}

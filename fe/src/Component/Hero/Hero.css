@@ -1,0 +1,99 @@
+.hero-section {
+  background-image: url("./BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+  margin: 20px;
+  padding: 90px 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* overlay làm chữ nổi */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-block;
+  background: #1aff5a;
+  color: #0b3d1c;
+
+  padding: 6px 16px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  margin-bottom: 20px;
+}
+
+/* Title */
+.hero-title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.hero-title .highlight {
+  display: inline-block;
+  margin-top: 6px;
+
+  font-size: 56px;
+  font-weight: 900;
+  font-style: italic;
+
+  color: #1aff5a;
+  text-shadow: 0 4px 20px rgba(26, 255, 90, 0.35);
+}
+
+/* Description */
+.hero-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+}
+
+/* Buttons */
+.hero-actions button {
+  margin-right: 16px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 70px 20px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-title .highlight {
+    font-size: 40px;
+  }
+
+  .hero-actions button {
+    margin-bottom: 12px;
+  }
+}
