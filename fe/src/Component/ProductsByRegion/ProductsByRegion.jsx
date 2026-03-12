@@ -92,12 +92,6 @@ function ProductsByRegion() {
                     >
                       <div className="product-region-img-wrap">
                         <Card.Img variant="top" src={product.image} alt={product.name} />
-                        <Badge className="product-badge" style={{ background: currentRegion?.color }}>
-                          {product.badge}
-                        </Badge>
-                        {product.progress >= 80 && (
-                          <span className="hot-badge">🔥 Sắp hết</span>
-                        )}
                       </div>
                       <Card.Body>
                         <div className="product-location">📍 {product.location}</div>

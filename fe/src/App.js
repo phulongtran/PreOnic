@@ -45,10 +45,33 @@ function HomePage() {
     <>
       <Navbar />
       <Hero />
-      <CompanyIntro />
-      <ProductsByRegion />
-      <Process />
-      <Campaigns />
+      <div style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/company-intro-bg.jpg)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        position: "relative",
+        animation: "backgroundFadeIn 2s ease-in-out",
+      }}>
+        {/* Dark overlay */}
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "rgba(0, 0, 0, 0.3)",
+          pointerEvents: "none",
+          animation: "overlayFadeIn 1.5s ease-out 0.5s both",
+        }}></div>
+        {/* Content with z-index */}
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <CompanyIntro />
+          <ProductsByRegion />
+          <Campaigns />
+          <Process />
+        </div>
+      </div>
       <AgricultureBanner />
       <Footer />
     </>

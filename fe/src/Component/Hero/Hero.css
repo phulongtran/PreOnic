@@ -1,225 +1,124 @@
-.hero-section {
-  background-image: url("./BG.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border-radius: 20px;
-  margin: 20px;
-  margin-top: 90px; /* Khoảng cách cho navbar fixed */
-  padding: 90px 0;
-
-  position: relative;
-  overflow: hidden;
+.hero{
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  position:relative;
 }
 
-/* overlay làm chữ nổi */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+/* overlay làm tối ảnh */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 720px;
+/* container */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding-left:120px;
 }
 
-/* Badge */
-.hero-badge {
-  display: inline-block;
-  background: #1aff5a;
-  color: #0b3d1c;
+/* khối text */
 
-  padding: 6px 16px;
-  border-radius: 999px;
-
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-
-  margin-bottom: 20px;
+.hero-text{
+  width:520px;            /* độ rộng giống ảnh */
+  display:flex;
+  flex-direction:column;
+  gap:0px;               /* khoảng cách dòng nhỏ lớn hơn title line-height */
+  color:white;
 }
 
-/* Title */
-.hero-title {
-  font-size: 52px;
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  color: #ffffff;
+/* badge */
+
+.hero-badge{
+  background:#22c55e;
+  padding:6px 18px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  width:fit-content;
 }
 
-.hero-title .highlight {
-  display: inline-block;
-  margin-top: 6px;
+/* tiêu đề */
 
-  font-size: 56px;
-  font-weight: 900;
-  font-style: italic;
-
-  color: #1aff5a;
-  text-shadow: 0 4px 20px rgba(26, 255, 90, 0.35);
+.hero-text h1{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.1;        /* 2 dòng sát nhau */
+  margin:0;
 }
 
-/* Description */
-.hero-desc {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 32px;
+/* chữ xanh */
+
+.highlight{
+  color:#22c55e;
+  font-style:italic;
 }
 
-/* Buttons */
-.hero-actions button {
-  margin-right: 16px;
-  padding: 12px 28px;
-  border-radius: 12px;
-  font-weight: 600;
+/* mô tả */
+
+.hero-text p{
+  font-size:16px;
+  line-height:1.6;
+  opacity:0.9;
+  margin-top:10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 70px 20px;
-  }
+/* buttons */
 
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-title .highlight {
-    font-size: 40px;
-  }
-
-  .hero-actions button {
-    margin-bottom: 12px;
-  }
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  margin-top:16px;
 }
 
-/* Animated particles */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
+/* button primary */
+
+.btn-primary{
+  background:#22c55e;
+  padding:12px 26px;
+  border-radius:10px;
+  border:none;
+  font-size:15px;
+  font-weight:600;
+  color:white;
+  cursor:pointer;
 }
 
-.hero-particles .particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: rgba(26, 255, 90, 0.4);
-  border-radius: 50%;
-  filter: blur(2px);
+/* button outline */
+
+.btn-outline{
+  padding:12px 26px;
+  border-radius:10px;
+  border:2px solid #22c55e;
+  background:transparent;
+  color:#22c55e;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
 }
 
-/* Floating decorative elements */
-.hero-float-element {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(26, 255, 90, 0.2) 0%, transparent 70%);
-  z-index: 1;
-  pointer-events: none;
+.btn-outline:hover{
+  background:#22c55e;
+  color:white;
 }
 
-.hero-float-element.float-1 {
-  top: 20%;
-  right: 10%;
-  width: 150px;
-  height: 150px;
-}
+/* watermark PreOnic */
 
-.hero-float-element.float-2 {
-  bottom: 20%;
-  left: 5%;
-  width: 80px;
-  height: 80px;
-}
-
-/* Enhanced highlight animation */
-.hero-title .highlight {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 56px;
-  font-weight: 900;
-  font-style: italic;
-  color: #1aff5a;
-  text-shadow: 0 4px 20px rgba(26, 255, 90, 0.35);
-  background: linear-gradient(90deg, #1aff5a, #00ff88, #1aff5a);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Button hover enhancements */
-.hero-actions > div {
-  display: inline-block;
-}
-
-.hero-actions button {
-  margin-right: 16px;
-  padding: 12px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-/* Primary Button - Màu xanh lá chủ đạo */
-.hero-btn-primary {
-  background: #13ec37 !important;
-  border: none !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(19, 236, 55, 0.4);
-}
-
-.hero-btn-primary:hover {
-  background: #0ea830 !important;
-  box-shadow: 0 6px 20px rgba(19, 236, 55, 0.5) !important;
-  transform: translateY(-2px);
-}
-
-.hero-btn-primary:active {
-  transform: translateY(0) !important;
-}
-
-/* Secondary Button - Outline xanh lá */
-.hero-btn-secondary {
-  background: transparent !important;
-  border: 2px solid #13ec37 !important;
-  color: #13ec37 !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-btn-secondary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #13ec37;
-  transition: width 0.3s ease;
-  z-index: -1;
-}
-
-.hero-btn-secondary:hover {
-  color: #ffffff !important;
-  border-color: #13ec37 !important;
-  box-shadow: 0 4px 14px rgba(19, 236, 55, 0.4) !important;
-}
-
-.hero-btn-secondary:hover::before {
-  width: 100%;
+.hero-brand{
+  position:absolute;
+  bottom:-30px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:140px;
+  font-weight:800;
+  color:#22c55e;
+  opacity:0.25;
 }

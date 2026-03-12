@@ -1,15 +1,16 @@
 .process-section {
   padding: 80px 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .process-title {
   font-size: 32px;
   font-weight: 700;
+  color: #13ec37;
 }
 
 .process-subtitle {
-  color: #6c757d;
+  color: #feffff;
   margin-top: 10px;
 }
 

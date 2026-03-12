@@ -1,6 +1,6 @@
 .products-region-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #f8fdf8 0%, #ffffff 100%);
+  background: transparent;
 }
 
 .section-header { margin-bottom: 40px; }
@@ -12,16 +12,17 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: #2e7d32;
-  margin-bottom: 12px;
+  margin-bottom: 20px; /* more space below badge */
+  margin-right: 30px; /* space to the title */
 }
 .section-title {
   font-size: 2rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 .section-desc {
-  color: #666;
+  color: #ffffff;
   font-size: 1.05rem;
   max-width: 520px;
   margin: 0 auto;
@@ -44,15 +45,15 @@
   background: transparent;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #555;
+  color: #fff; /* make text white */
   cursor: pointer;
   transition: all 0.3s;
 }
 .region-tab.active {
-  color: var(--region-color);
+  color: #fff; /* keep white even when active */
   box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
 }
-.region-tab:hover { color: var(--region-color); }
+.region-tab:hover { color: #fff; }
 .region-icon { font-size: 1.3rem; }
 
 /* Region description */

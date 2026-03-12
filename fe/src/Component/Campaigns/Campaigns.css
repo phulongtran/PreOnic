@@ -1,6 +1,6 @@
 .campaigns-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8fffe 0%, #f0fdf4 100%);
+  background: transparent;
   position: relative;
 }
 
@@ -18,13 +18,14 @@
 .campaigns-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #111812;
+  color: #13ec37;
   margin-bottom: 8px;
 }
 
 .campaigns-header p {
   font-size: 1rem;
-  color: #6b7280;
+  /* force subtitle white for visibility */
+  color: #ffffff !important;
   margin: 0;
 }
 
@@ -136,7 +137,7 @@
 
 .progress-fill {
   height: 100%;
-  background-color: #13ec37;
+  background-color: #FFD402 !important ; /* yellow progress bar */
   border-radius: 10px;
   transition: width 0.6s ease;
 }

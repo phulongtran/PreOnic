@@ -10,7 +10,7 @@
 
 /* Glassmorphism effect khi scroll */
 .navbar-wrapper.scrolled {
-  background: rgba(255, 255, 255, 0.85);
+  background: #FFE961(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
@@ -51,7 +51,7 @@
   font-weight: 700;
   font-size: 22px;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #111827 0%, #13ec37 100%);
+  background: linear-gradient(135deg, #13ec37 0%, #13ec37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -63,7 +63,7 @@
 }
 
 .navbar-custom .nav-link {
-  color: #374151 !important;
+  color: #16DB38 !important; /* updated link color */
   font-weight: 500;
   margin: 0 8px;
   padding: 8px 16px !important;
@@ -73,12 +73,12 @@
 }
 
 .navbar-custom .nav-link:hover {
-  color: #13ec37 !important;
+  color: #16DB38 !important;
   background-color: rgba(19, 236, 55, 0.08);
 }
 
 .navbar-custom .nav-link.active {
-  color: #13ec37 !important;
+  color: #16DB38 !important;
   font-weight: 600;
 }
 
